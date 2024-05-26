@@ -1,0 +1,20 @@
+\newpage
+\chapter*{List of Symbols}\markboth{LIST OF SYMBOLS}{}
+\begin{center}\centering
+\begin{longtable}{cp{2cm}l}
+\textbf{Symbol} & & \textbf{Description} \\
+$T$ & & Number of timesteps \\
+$\chi$ & & Sequence of feature vectors over $T$ consecutive time intervals \\
+$G(V, E)$ & & Undirected graph representing the road network \\
+$V$ & & Set of nodes (detector nodes) in the graph \\
+$N$ & & Total number of nodes in the graph \\
+$E$ & & Set of road links connecting the nodes in the graph \\
+$A$ & & Adjacency matrix of the graph \\
+$x^t_i$ & & D-dimensional feature vector for the $i$-th node at time $t$ \\
+$c_i$ & & Traffic volume count for the $i$-th node \\
+$Y$ & & Predicted traffic volume counts at the next timestep \\
+$M$ & & Binary mask vector indicating missing traffic volume counts \\
+$G'(V', E')$ & & Modified graph with added or removed edge \\
+$Y'$ & & Predicted traffic volume counts with the modified topology \\
+\end{longtable}
+\end{center}

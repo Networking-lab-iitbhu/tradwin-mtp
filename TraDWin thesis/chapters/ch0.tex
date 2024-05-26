@@ -1,0 +1,35 @@
+\chapter{Introduction}\label{chap0}
+
+Today's rapid urbanization underscores the critical challenge of optimizing traffic and planning city infrastructure around it. Numerous studies have explored the direct and indirect impacts of traffic on health\cite{levy2010evaluation}, financial\cite{gorea2016financial}, and social domains\cite{anciaes2017social}. Hence, research into intelligent systems that can assist in this direction is imperative.
+
+The Digital Twin, as a recent development within cyber-physical systems (CPS), has garnered increased attention in recent decades\cite{guo2017mobile}\cite{singh2021digital}, particularly today with the advancements in big data, IoT connectivity, and affordable computing, which make such systems increasingly practical today. A Digital Twin is a virtual representation of a real-world object\cite{VANDERHORN2021113524}, system, or process meticulously designed to replicate its physical counterpart in the digital realm. This allows it to capture and simulate the intricate details of a physical entity, enabling real-time monitoring, analysis, and prediction of its behavior. It goes beyond mere 3D modeling by incorporating live data, sensor inputs, and advanced analytics, providing a dynamic and interactive digital mirror of the physical world\cite{VANDERHORN2021113524}. This capability has found applications across a multitude of fields, from manufacturing and engineering to healthcare, urban planning, and beyond.
+
+Our traffic digital twin, \modelname, as referred to in this paper, is an interactive simulation of city traffic that continuously updates its internal state with real-time traffic data from various sources. With the rise of smart cities equipped with IoT sensors and live camera feeds, there are numerous existing methods and theoretical approaches to enhance this capability. For instance, the Sydney Coordinated Adaptive Traffic System (SCATS)\cite{scats}, initially developed in Australia, utilizes inductive loop-based sensors at traffic signals to monitor traffic volume. It's already operational in over 180 cities across 28 countries, including New Zealand, Dublin, Shanghai, and Hong Kong \cite{wiki:sydney_traffic_system}. Similarly, cities like New York and Los Angeles have devised their own systems similar to SCATS. Other approximate techniques involve traffic probes\cite{zhu2012probe}, mobile phones with GPS\cite{rose2006mobile}—exemplified by Google's provision of congestion and travel time data—and the use of deep learning computer vision models with cameras to identify and count vehicles passing through roads. However, it's important to note that these methods primarily provide absolute volume count numbers at different nodes, as compared to collecting more granular data, such as source-destination pairs, which poses logistical and privacy challenges. In our study, we rely solely on absolute traffic volume data without other information related to individual vehicles.
+
+In our paper, we aim to provide an end-to-end framework for the challenges of real-time data collection and aggregation. Along with a model that aims to solve three key tasks related to traffic modeling, which are as follows:
+\begin{enumerate}[(i)]
+    \item \textit{Traffic Prediction:} Given a traffic volume time series, our goal is to forecast future values, essentially predicting future dynamics based on historical data.
+    
+    \item \textit{Imputation:} Given a traffic volume time series with missing data, which could be due to sensor failure, etc., fill in the missing values as accurately as possible.
+    
+    \item \textit{Re-assignment on edge addition or removal:} Predicting how traffic flow will be affected by changes in the road network, such as adding or removing a road segment.
+\end{enumerate}
+
+In the contemporary literature review, as we discuss later, we see mathematical as well as deep learning time series analysis methods are prevalent for tasks (i) and (ii). However, for the task (iii), microscopic traffic simulation software like SUMO\cite{sumo} and Vissim\cite{vissim} are commonly employed. Such simulation engines are resource-intensive and require comprehensive information on vehicle types, sources, and destinations to yield accurate results, which may not be easily collected. Another general limitation of previous approaches, that focus only on time series analysis, is that all computation is done only taking into account traffic flow data, ignoring any possible exogenous variables like weather\cite{weather}, holidays\cite{holiday}, etc.
+
+In our research, we assert that traffic dynamics are influenced not only by intrinsic relations within the data but also by extrinsic factors\cite{weather}\cite{holiday}, and hidden relationships may exist among these features, which are not immediately apparent. Thus, the TDT model we propose is very easily extensible and includes new features that extend model prediction capabilities.
+
+For the model, we use an informed Wasserstein distance-based GAIN, which is a modified Generative Adversarial Imputation Net (GAIN)\cite{gain} (a class of conditional GANs) with modifications from Wasserstein GAN (WGAN)\cite{wgan} which have been shown to be very effective in training GANs\cite{wgan}. It also includes a modified loss function from physics-informed deep learning techniques\cite{pidl}, which helps the model to conform to the physical laws of conservation. 
+
+We use Node2Vec\cite{node2vec} to convert graph nodes to feature embeddings representing their structure and then append relevant traffic data and other semantic information like weather after encoding them using Word2Vec\cite{word2vec} to the embeddings. 
+
+We train and test our model on real-world traffic data obtained from the SCATS\cite{scats} system in Dublin city and also on specific scenarios generated and simulated in SUMO\cite{sumo} (Simulation of Urban Mobility) simulations.
+
+Finally, we summarise the contributions of our study as follows:
+\begin{enumerate}[(i)]
+  \item Proposing an end-to-end workflow of an interactive Traffic Digital Twin system with traffic volume data as input.
+  \item Developing and testing a new physics-informed Wasserstein distance-based GAIN model to predict and model different tasks on real-world Dublin city traffic data.
+  \item Exploring physics-informed models to effectively model physical phenomena related to traffic modeling.
+\end{enumerate}
+
+Section I introduces our work, and Section II explores the existing research related to our work. Section III explains the methods used along with the details of the implementation to replicate the model. It also compares our approach with the existing work in this direction. Section IV presents the experiment details and the results of the proposed methods, and finally, Section V concludes the report.

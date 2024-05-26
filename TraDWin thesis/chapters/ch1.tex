@@ -1,0 +1,40 @@
+\chapter{Related Work}\label{chap1}
+
+In this section, we briefly go over the existing work done related to traffic modeling, primarily existing spatiotemporal modeling methods, both deep learning and mathematical, and compare them with our approach. We address contemporary work done for each of the different tasks that our model aims to perform, i.e., prediction, imputation, and prediction on changing topology, which is unique to our paper. This comprehensive review sets the foundation for understanding the advancements and gaps in the current methodologies, thereby highlighting the significance of our proposed approach.
+
+\section{Traditional Time Series Models}
+\subsection{Autoregressive Integrated Moving Average (ARIMA)}
+Autoregressive Integrated Moving Average (ARIMA) \cite{arima} and its variants, such as time-oriented ARIMA \cite{time_arima} and Seasonal ARIMA \cite{sarima}, are extensively employed traditional algorithms for prediction and forecasting tasks. ARIMA operates on time series data and is often combined with other algorithms to incorporate spatial features. For example, C. Xu et al. integrated ARIMA with a genetic algorithm to estimate upcoming traffic flow on roads. While ARIMA models are adept at capturing linear time series data, the addition of genetic algorithms enhances their capability to extract features from nonlinear historical data. This integration underscores the versatility and adaptability of ARIMA-based approaches in addressing complex prediction challenges. Hence, we also compare our model performance with the ARIMA model.
+
+\section{Matrix and Tensor Factorization Methods}
+\subsection{Temporal Regularized Matrix Factorization (TRMF)}
+Other methods like Temporal Regularized Matrix Factorization (TRMF) \cite{trmf}, Bayesian Temporal Regularized Matrix Factorization (BTRMF) \cite{btrmf}, Bayesian Temporal Matrix Factorization (BTMF), and Bayesian Temporal Tensor Factorization (BTTF) have also been explored in the context of traffic prediction. These methods extend the principles of matrix factorization and tensor factorization to capture temporal dependencies and spatial correlations in high-dimensional traffic data. TRMF \cite{trmf}, introduced by Lai et al. (2017), extends TRMF to tensor data structures, allowing for the modeling of multi-dimensional traffic flow data with enhanced flexibility.
+
+\subsection{Bayesian Approaches}
+Similarly, BTRMF \cite{btrmf}, proposed by Liu et al. (2019), integrates Bayesian inference into tensor factorization to provide probabilistic predictions and uncertainty quantification in traffic forecasting tasks. On the other hand, BTMF and BTTF extend the Bayesian framework to matrix and tensor factorization, respectively, offering robust approaches for modeling temporal dynamics and spatial interactions in traffic networks while accounting for uncertainties in the prediction process. These methods contribute to the diverse landscape of predictive models for traffic prediction, each offering unique advantages and insights for tackling the challenges of forecasting traffic flow accurately.
+
+\section{Machine Learning Approaches}
+\subsection{Long Short-Term Memory (LSTM)}
+Long Short-Term Memory (LSTM) networks \cite{lstm} are a type of recurrent neural network (RNN) designed to capture long-term dependencies in sequential data, making them particularly well-suited for traffic prediction tasks. LSTMs address the vanishing gradient problem prevalent in traditional RNNs by introducing a gating mechanism that regulates the flow of information. This allows LSTMs to maintain and update relevant information over long sequences, enabling them to effectively model temporal dependencies in traffic data.
+
+\subsection{Applications in Traffic Prediction}
+LSTMs have been applied successfully in various traffic prediction scenarios. For instance, Ma et al. utilized LSTMs to predict short-term traffic flow, demonstrating their ability to capture complex temporal patterns and improve prediction accuracy compared to traditional methods. Additionally, hybrid models combining LSTMs with other machine learning techniques, such as convolutional neural networks (CNNs), have been developed to leverage spatial correlations in traffic data alongside temporal dependencies. These hybrid models have shown enhanced performance in predicting traffic flow, highlighting the versatility and effectiveness of LSTM-based approaches in traffic modeling.
+
+\section{Graph-Based Methods}
+\subsection{Graph Neural Networks (GNNs)}
+Graph Neural Networks (GNNs) \cite{gnn} have emerged as a prominent tool for spatiotemporal modeling, demonstrating effectiveness in various applications such as traffic forecasting and imputation. For instance, studies by Li et al. (2018) and Zhang et al. (2019) have showcased their utility in accurately predicting traffic patterns and filling in missing data in traffic volume time series. GNNs operate by iteratively updating node representations based on their local neighborhood information, allowing them to capture complex spatial and temporal dependencies within graph-structured data.
+
+\subsection{Limitations of Traditional GNNs}
+However, a limitation of traditional GNNs is their reliance on the static network topology during training, which poses challenges when adapting them to dynamic graphs. As a result, they may not be suitable for tasks involving changes in the graph structure, such as predicting traffic flow upon adding or removing edges, which is a crucial aspect of our research focus. Our approach addresses this gap by incorporating mechanisms to adapt to changing topologies, thus enhancing the flexibility and applicability of GNNs in dynamic traffic networks.
+
+\section{Physics-Informed Deep Learning (PIDL)}
+\subsection{Overview of PIDL}
+Physics-informed deep learning (PIDL) \cite{raissi2017physics} is an emerging deep learning methodology wherein a neural network undergoes training to tackle learning tasks while adhering to the principles of physics, as given by physics-based constraint equations, general nonlinear partial differential equations, etc. This way, the fundamental laws of physics are ingrained as a bias during training, and the model does not have to figure out those dependencies on its own, which allows the resultant neural network to be data-efficient.
+
+\subsection{Application in Traffic Modeling}
+For traffic modeling, PIDL serves as an effective middle ground between purely data-driven models and purely model-driven methods. Purely model-driven approaches use a set of mathematical models and prior knowledge of traffic dynamics as input to then estimate future states. They assume the model to be an accurate representation of real-world traffic; however, such an assumption fails to capture the intricate dynamics of real-world traffic. Moreover, different equally viable models exist for the same task, and while one may be better than another for specific data, generalization across models is hard.
+
+Some examples of model-driven traffic approaches are the Lighthill-Whitham-Richards (LWR) \cite{lwr} model, Cell Transmission model (CTM) \cite{ctm}, etc. In contrast, pure deep learning approaches require large amounts of data to learn a good generalized relation since they learn without any pre-existing information on physical relations and constraints. Hence, physics-informed deep learning, which combines both approaches by trying to bias the deep learning model to learn the physics-based results using some parameter $\lambda$, still allows enough freedom to learn more granular relations in traffic dynamics.
+
+\section{Summary}
+In conclusion, the integration of traditional, matrix, and tensor factorization, graph-based, and physics-informed deep learning methods provides a comprehensive overview of the diverse approaches employed in traffic modeling. Our proposed method aims to address the limitations identified in existing techniques, particularly in handling dynamic topologies, thereby contributing to the advancement of traffic prediction and imputation tasks.

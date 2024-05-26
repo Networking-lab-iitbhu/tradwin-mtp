@@ -1,0 +1,12 @@
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Traffic Digital Twin (TDT) data processing}}{15}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Model architecture}}{18}{figure.caption.18}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Snapshot of sensor locations plotted along with road network from Overpass API}}{27}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces MAPE and RMSE on prediction task for different deltas}}{31}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Imputation comparison for different missing rates}}{33}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces MAPE and RMSE on re-assignment task vs number of edges modified}}{35}{figure.caption.23}%
+\addvspace {10\p@ }
