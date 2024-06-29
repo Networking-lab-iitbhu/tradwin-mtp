@@ -1,0 +1,22 @@
+%!TEX root=./paper.tex
+\section{\textbf{Problem Formulation}}\label{sec:problem-for}
+
+A road network can be considered an undirected graph $G = (V, E)$ where $V$ represents nodes, which is a collection of $N$ detector nodes, i.e., $V=\{v_1,v_2,...,v_n\}$ where $N = |V|$ and $v_i$ is the $i$th detector node. $E$ represents the $N_E = |E|$ road links connecting the detectors, and let $A \in \mathbb{R}^{N \times N}$ denote the adjacency matrix of $G$, i.e., $A = \{e_{ij}\}, i,j=1$ to $N$ where $e_{ij} = 1$ if nodes $v_i$ and $v_j$ are adjacent and $0$ otherwise.
+
+Let each node of graph $G$ at time $t$ be represented by a $D$-dimensional feature vector represented as $\mathbf{x}_i^t \in \mathbb{R}^D$ that represents the node embeddings generated as explained later using node embeddings obtained from Node2Vec, other meta-information encoded, and traffic volume counts. Also, let the volume of traffic at time $t$ at node $i$ be $c_i^t$.
+
+Define feature vectors for all nodes at a particular time $t$ as
+\begin{equation*}
+    \mathbf{X}_t = (\mathbf{x}_1^t, \mathbf{x}_2^t, \ldots, \mathbf{x}_N^t) \in \mathbb{R}^{N \times D} \tag{1}
+\end{equation*}
+Let the number of timesteps denoted by $T$ be a hyperparameter denoting the number of consecutive time steps under consideration. Then denote the values of all feature vectors over all nodes over $T$ consecutive time intervals starting at some time $t_0$ as
+\begin{equation}
+    \bm{\chi} = (\mathbf{X}_{t_0}, \mathbf{X}_{t_0+1}, \ldots, \mathbf{X}_{t_0+T-1}) \in \mathbb{R}^{T \times N \times D} \tag{2}
+\end{equation}
+
+Given the aforementioned notation, the problem that we are tackling in this paper can be formally define as proposing as Traffic Digital Twin (TDT) that can perform the following tasks:
+\begin{enumerate}[(i)]
+    \item \textbf{Traffic prediction:} Given graph $G(V, E)$ and a sequence $\bm{\chi}$ of feature vectors of observed historical traffic flow over $T$ consecutive intervals, i.e., $\bm{\chi} = (\mathbf{X}_{t_0}, \mathbf{X}_{t_0+1}, \ldots, \mathbf{X}_{t_0+T-1})$, predict $\mathbf{Y}$, the traffic volume counts $c_i$ for $i \in N$ at the next timestep $t_0+T$, i.e., $\mathbf{Y} = \{c_1^{t_0+T}, c_2^{t_0+T}, \ldots, c_N^{t_0+T}\}$. Henceforth, we refer to this task as task (i).
+    \item \textbf{Imputation:} Given graph $G(V,E)$ and a sequence $\bm{\chi}$ of feature vectors of observed historical traffic flow over $T$ consecutive intervals, i.e., $\bm{\chi} = (\mathbf{X}_{t_0}, \mathbf{X}_{t_0+1}, \ldots, \mathbf{X}_{t_0+T-1})$, a binary mask vector $\mathbf{M} \in \mathbb{R}^{N \times T}$ such that $\mathbf{M} = \{m_{ij}\}$ where $m_{ij} = 1$ if the traffic volume count at detector $i$ at time $t$ i.e. $c_{ij}$ is known and 0 otherwise to indicate its missing, impute the missing $c_{ij}$ values. Henceforth, we refer to this task as task (ii).
+    \item \textbf{Traffic assignment on edge addition/removal:} Given original graph $G(V,E)$ and the new modified graph $G'(V', E')$ with an edge $e$ added or removed. Let $\phi$ be a hyperparameter denoting the number of closest neighbor nodes to the changed edge to mask out, i.e., $\mathbf{M} = \{m_i\}$ where $m_i = 1$ if the $\text{dist}(v_i,e)> \phi$ and 0 otherwise. Predict $\mathbf{Y'} = \{c'_1, c'_2, \ldots, c'_N \}$ where $c'_i$ is the traffic volume of the detectors with the modified topology $G'$. Henceforth, we refer to this task as task (iii).
+\end{enumerate}

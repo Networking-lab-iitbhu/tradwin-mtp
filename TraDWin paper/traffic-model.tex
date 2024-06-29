@@ -1,0 +1,60 @@
+%!TEX root=./paper.tex
+\subsection{\name: Traffic Model}
+
+In this section, we present the architecture of our \name model, which is inspired from architectures of Generative Adversarial Imputation Nets (GAIN)\cite{gain} and Wasserstein Generative Adversarial Network (WGAN)\cite{wgan}. GAIN is a new and popular type of conditional GAN that has been applied to a variety of missing value imputation tasks on different datasets with favorable results. WGAN is an improvement over traditional GANs proposed by M. Arjovsky et al., that is designed to improve training stability by focusing on using Wasserstein distance metric instead of the traditional Jensen-Shannon divergence, along with some other architecture changes like gradient clipping, removal of sigmoid, etc., that have been shown to result in more reliable convergence and better quality samples.
+
+\subsubsection{\textit{Generator:}}
+
+The generator \( G \) accepts inputs of observed data, with missing values, denoted by \( \mathbf{X} \), the binary mask vector \( \mathbf{M} \) which indicates what are the missing values, and a noise vector denoted by \( \mathbf{Z} \). It produces imputed data \( \mathbf{X}_g \), representing a vector of imputations, which is then projected to form the complete imputed output \( \mathbf{Y}_0 \). 
+
+Formally, the output of the generator \( G \) can be denoted as: 
+\[ \mathbf{X}_g = G(\mathbf{X}, \mathbf{M}, (\mathbf{1}-\mathbf{M}) \odot \mathbf{Z}) \]
+
+where \( \odot \) denotes the Hadamard product or the element-wise multiplication and \( \mathbf{Z} \) is the \( d \)-dimensional noise vector. \( \mathbf{X}_g \) represents the missing values which are then filled back in \( \mathbf{X} \) as per the mask \( \mathbf{M} \), and this makes the final generator output that is then passed off to the discriminator to judge.
+
+\subsubsection{\textit{Discriminator:}}
+
+Similar to the discriminator in traditional GANs, we also use another model called the Discriminator, denoted by \( D \), that acts as an adversary to the Generator \( G \) and trains it. The discriminator \( D \) defined in the original GAIN implementation as \( D : \mathbf{\chi} \rightarrow [0,1]^d \), outputs a binary vector instead of a single real value, which denotes what components of the generator input are real (observed) and what are fake (imputed). 
+
+So, in contrast to the traditional discriminator as used in GANs, which predicts whether the generated result is entirely fake or real, the discriminator in GAIN predicts what components are real or fake. And the loss which is then used in SGD is the mean of losses for individual components.
+
+\subsubsection{\textit{Hint}}
+GAIN introduces a new concept called the hint mechanism, represented by a random variable \( \mathbf{H} \) taking values in a space \( \mathcal{H} \). The aim of this hint mechanism is to provide additional missing information to the discriminator about the mask. The following proposition was introduced and proved in the GAIN\cite{gain} original paper:
+
+\begin{mdframed}[linewidth=0.5pt]
+\textit{
+\newtheorem{proposition}{Proposition}
+\begin{proposition} \label{prop:nonunique}
+    There exist distributions of \( \mathbf{X} \), \( \mathbf{M} \), and \( \mathbf{H} \) for which solutions to \( \hat{p}(\mathbf{x} | \mathbf{h}, m_i = t) = \hat{p}(\mathbf{x} | \mathbf{h}) \) for each \( i \in \{1, \ldots, d\} \), \( \mathbf{x} \in \mathcal{X} \), and \( \mathbf{h} \in \mathcal{H} \) such that \( p_h(\mathbf{h} | m_i = t) > 0 \) are not unique under the optimality criterion of GAN.
+\end{proposition}
+}
+\end{mdframed}
+
+This means that there may exist several possible distributions that \( G \) may generate that may seem valid to \( D \), so \( \mathbf{H} \) must provide enough information to uniquely identify the correct representation of the underlying data, which is what the hint mechanism aims to do.
+
+The hint mechanism depends on the binary mask vector \( \mathbf{M} \), and for each imputed sample \( (\hat{\mathbf{x}}, \mathbf{m}) \), we draw \( \mathbf{h} \) from the distribution \( \mathbf{H} | \mathbf{M} = \mathbf{m} \). We then add \( \mathbf{h} \) as an extra input to the discriminator, resulting in a function \( D: \mathcal{X} \times \mathcal{H} \rightarrow [0, 1]^d \), where each component of \( D(\hat{\mathbf{x}}, \mathbf{h}) \) represents the probability that the corresponding component of \( \hat{\mathbf{x}} \) was observed given \( \hat{\mathbf{X}} = \hat{\mathbf{x}} \) and \( \mathbf{H} = \mathbf{h} \).
+By varying how \( \mathbf{H} \) is defined, we control the level of information it provides about \( \mathbf{M} \).
+
+\textcolor{gray!80}{\vrule width 0.95\columnwidth height 0.001pt depth 0pt \relax}
+
+\vspace{1ex}
+
+Finally, we take inspiration from the architecture of WGAN and incorporate some of those changes in our model. Traditional GANs suffer from training instability and model collapse, i.e., inability to learn the diverse representations and only generating repetitive samples. Wasserstein GAN (WGAN) proposed by M Arjovsky et. al, solves these problems and we highlight some of the architectural changes we made to GAIN based on WGAN in the following paragraphs.
+
+In traditional GAN the generator and discriminator are trained using the following loss functions:
+\[
+\mathcal{L}_{\text{GAN}}^G = \log(1 - D(G(z)))
+\]
+\[
+\mathcal{L}_{\text{GAN}}^D = -\log(D(x)) - \log(1 - D(G(z)))
+\]
+
+whereas in WGANs, we remove the logarithms and use Wasserstein distance for loss instead.
+\[
+\mathcal{L}_{\text{WGAN}}^G = -D(G(z))
+\]
+\[
+\mathcal{L}_{\text{WGAN}}^D = D(G(z)) - D(x)
+\]
+
+Another change in WGANs, that we incorporate in GAIN is the absence of a sigmoid activation function in the discriminator's output layer, unlike in traditional GANs. This alteration enables the discriminator to output unbounded real-valued scores instead of probabilities. Additionally, WGANs incorporate gradient clipping as a regularization technique to enhance training stability. Gradient clipping involves setting a threshold value for the gradients, and if they exceed this threshold, they are scaled down to ensure that their magnitude does not surpass it. This approach helps stabilize the training process and mitigates issues such as exploding gradients.

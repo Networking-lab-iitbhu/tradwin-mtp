@@ -1,0 +1,27 @@
+%!TEX root=./paper.tex
+\subsection{\textbf{Physics Informed Deep Learning}}
+
+Physics-informed deep learning (PIDL) represents a distinct approach within deep learning (DL), where a neural network is trained to tackle learning tasks while adhering to the principles of physics. By integrating fundamental physical laws as prior knowledge, the resulting neural network serves as a data-efficient approximator, adept at processing input data and delivering accurate predictions.
+
+In situations where systems are required to adhere to the physical laws, PIDL is specially useful as it biases the model to follow the physics models, this allows the model to generate more accurate results, specially GANs as this eliminates several possible predicted distributions that are not viable do to not adhering to the physical laws of the system.
+
+In our situation, specifically with problem 3. of Traffic assignment on edge addition/removal, where we have to predict the changed volume counts on the same timestep but with modified topology, it is imperative, according to the \textit{conservation law} of traffic, that in such a case that the total volume of traffic in a large enough region prior to and after redistribution will be same.
+
+Formally, for a particular fixed time, let \( G(V,E) \) be the original graph, and \( G'(V',E') \) be the graph obtained by adding or removing an edge \( e \). Similarly, \( c_i \) represents the traffic volume at detector \( i \) in \( G \) for \( i = 1 \) to \( N = |V| \), and \( c_i' \) represents the traffic volume at detector \( i \) in \( G' \) for \( i = 1 \) to \( N' = |V'| \). Then from \textit{conservation law}:
+\begin{equation}
+    C = \sum_{i=1}^{N} c_i = C' = \sum_{i=1}^{N'} c'_i \tag{5}
+\end{equation}
+
+In order to bias the model for conservation as described in Eq. (3), it needs to be integrated into the learning process of the PIDL network. The simplest way to do it is to define it as an additional term to the loss used to update the model, basically penalizing the model heavily for predictions that do not conform to the physical constraints. With traffic volumes \(c_i\) along with other graph information as training input, we establish two different measures for the discriminator to evaluate generator output:
+\begin{enumerate}
+    \item \textbf{\( \mathcal{L}_{DL} \)}: Denoting the conventional discriminator loss defined as:
+    \[ \mathcal{L}_{DL} = \mathbb{E}_{x \sim P_{\text{data}}}[D(x)] - \mathbb{E}_{z \sim P_z}[D(G(z))] \]
+
+    \item \textbf{\( \mathcal{L}_{PHY} \)}: Denoting the conservation loss. As defined in Eq. (3), for a given mask \( M \), let \( S \) be the set of detectors such that \( M(i) = 0 \), specifically \( S = \{i \mid M(i) = 0\} \). Then let \( C_0 \) be the sum of masked traffic volume counts, i.e., \( C_0 = \sum_{i \in S} c_i \), and \( Y = \{c'_i \mid i \in S\} \) be the generator output. Then define:
+    \[ \mathcal{L}_{PHY} = (C_0 - \sum_{i \in S} c'_i)^2 \]
+\end{enumerate}
+In order to control the dominance of the different components of the loss function, we introduce two new hyperparameters, \( \mu \) and \( \lambda \), to adjust the weights of \( \mathcal{L}_{DL} \) and \( \mathcal{L}_{PH} \) respectively. Thus, the final loss function can be defined as:
+
+\[ \mathcal{L} = \mu \cdot \mathcal{L}_{DL} + \lambda \cdot \mathcal{L}_{PHY} \]
+
+In conclusion, by leveraging hyperparameters, we can fine-tune the model's balance between different objectives. Biasing the discriminator to respect physical laws allows the generator to better capture underlying patterns in the data, a capability we found useful in our experiments as we describe ahead.
