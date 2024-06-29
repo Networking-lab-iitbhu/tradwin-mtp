@@ -97,6 +97,15 @@ M.~Cools, E.~Moons, and G.~Wets, ``Assessing the impact of weather on traffic
   locations,'' \emph{Transportation research record}, vol. 2136, no.~1, pp.
   57--66, 2009.
 
+\bibitem{node2vec}
+A.~Grover and J.~Leskovec, ``node2vec: Scalable feature learning for
+  networks,'' in \emph{Proceedings of the 22nd ACM SIGKDD international
+  conference on Knowledge discovery and data mining}, 2016, pp. 855--864.
+
+\bibitem{word2vec}
+T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean, ``Efficient estimation of word
+  representations in vector space,'' 2013.
+
 \bibitem{gain}
 J.~Yoon, J.~Jordon, and M.~Schaar, ``Gain: Missing data imputation using
   generative adversarial nets,'' in \emph{International conference on machine
@@ -109,15 +118,6 @@ M.~Arjovsky, S.~Chintala, and L.~Bottou, ``Wasserstein gan,'' 2017.
 A.~J. Huang and S.~Agarwal, ``Physics-informed deep learning for traffic state
   estimation: Illustrations with lwr and ctm models,'' \emph{IEEE Open Journal
   of Intelligent Transportation Systems}, vol.~3, pp. 503--518, 2022.
-
-\bibitem{node2vec}
-A.~Grover and J.~Leskovec, ``node2vec: Scalable feature learning for
-  networks,'' in \emph{Proceedings of the 22nd ACM SIGKDD international
-  conference on Knowledge discovery and data mining}, 2016, pp. 855--864.
-
-\bibitem{word2vec}
-T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean, ``Efficient estimation of word
-  representations in vector space,'' 2013.
 
 \bibitem{arima}
 R.~Adhikari and R.~K. Agrawal, ``An introductory study on time series modeling

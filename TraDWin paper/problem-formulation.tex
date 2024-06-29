@@ -1,7 +1,7 @@
 %!TEX root=./paper.tex
 \section{\textbf{Problem Formulation}}\label{sec:problem-for}
 
-A road network can be considered an undirected graph $G = (V, E)$ where $V$ represents nodes, which is a collection of $N$ detector nodes, i.e., $V=\{v_1,v_2,...,v_n\}$ where $N = |V|$ and $v_i$ is the $i$th detector node. $E$ represents the $N_E = |E|$ road links connecting the detectors, and let $A \in \mathbb{R}^{N \times N}$ denote the adjacency matrix of $G$, i.e., $A = \{e_{ij}\}, i,j=1$ to $N$ where $e_{ij} = 1$ if nodes $v_i$ and $v_j$ are adjacent and $0$ otherwise.
+A road network can be represented as an undirected graph \( G = (V, E) \), where \( V \) denotes the set of nodes and \( E \) denotes the set of edges. The nodes \( V \) consist of \( N \) detector nodes, formally expressed as \( V = \{v_1, v_2, \ldots, v_n\} \), where \( N = |V| \) and \( v_i \) represents the \( i \)th detector node. The set \( E \) represent the road links connecting the detector nodes with \( N_E = |E| \). The adjacency matrix of \( G \), denoted by \( A \in \mathbb{R}^{N \times N} \), is defined as \( A = \{e_{ij}\} \), where \( i, j = 1, \ldots, N \), and \( e_{ij} = 1 \) if nodes \( v_i \) and \( v_j \) are adjacent and \( 0 \) otherwise.
 
 Let each node of graph $G$ at time $t$ be represented by a $D$-dimensional feature vector represented as $\mathbf{x}_i^t \in \mathbb{R}^D$ that represents the node embeddings generated as explained later using node embeddings obtained from Node2Vec, other meta-information encoded, and traffic volume counts. Also, let the volume of traffic at time $t$ at node $i$ be $c_i^t$.
 
