@@ -1,5 +1,5 @@
 %!Tex root=./paper.tex
-Introduction
+\section{Introduction}
 
 The contemporary landscape of urban development is characterized by rapid urbanization and increasing population densities, presenting formidable challenges in optimizing traffic flow and urban infrastructure planning. Extensive research has documented the multifaceted impacts of traffic on public health\cite{levy2010evaluation}, economic viability\cite{gorea2016financial}, and social dynamics\cite{anciaes2017social}, highlighting the urgent need for advanced technological interventions.
 
@@ -17,6 +17,7 @@ In this paper, we aim to provide an end-to-end framework that first collects and
 \item \textbf{Traffic Prediction}: Predicting how traffic volume will change in the future based on a given traffic volume time series and historical data.
 \item \textbf{Imputation}: For traffic volume time series with missing data (potentially due to sensor failure or other issues), our framework aims to accurately fill in the missing values.
 \item \textbf{Re-assignment on Edge Addition or Removal}: Our objective is to predict how traffic flow will be affected by changes in the road network, such as the addition or removal of road segments.
+\end{enumerate}
 
 Our proposed framework (i) takes input a graph representation of map where different regions are the vertices of the graph and different roads form the edges of the graph. (ii) Next, it encodes the structural features of graph nodes using Node2Vec \cite{node2vec} and  transforms them into feature embeddings. (iii) These embeddings are augmented with relevant traffic data and other semantic information, such as weather, encoded using Word2Vec \cite{word2vec}.
 (iv) This encoded representation of the graph is used as input to an informed Wasserstein distance-based Generative Adversarial Imputation Net (GAIN), a modified version of the GAIN \cite{gain}, which is a type of conditional GAN. This adaptation incorporates elements from the Wasserstein GAN (WGAN) \cite{wgan}, enhancing GAN training effectiveness. Additionally, we integrate a modified loss function from physics-informed deep learning techniques \cite{pidl}, ensuring the model adheres to physical conservation laws.
@@ -29,5 +30,6 @@ To summarize, we outline the our contributions as follows:
 \item Our proposed framework considers contextual data like geographical, meteorological, temporal data that are aggregated according to physcial conservation laws.
 \item We mathematically capture the dynamics involved in traffic modeling using physical laws.
 \item Using this physics-informed traffic model, we develop a Wasserstein distance-based Generative Adversarial Imputation Net (GAIN) framework to predict and compute various tasks using real-world traffic data.
+\end{enumerate}
 
 The rest of the paper is organized as follows. The literature review is presented in Section~\ref{sec:related-works}. We formulate our problem in Section~\ref{sec:problem-for}. Our proposed framework is presented in Section~\ref{sec:system-model}. We present our empirical findings and performance evaluation of our proposed framework in Section~\ref{sec:experiments}. Finally, Section~\ref{sec:conclusion} concludes the paper.
