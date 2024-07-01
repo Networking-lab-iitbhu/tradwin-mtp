@@ -14,45 +14,45 @@ Warning--I didn't find a database entry for "met_historical_data"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 36 entries,
+You've used 39 entries,
             4087 wiz_defined-function locations,
-            1030 strings with 13949 characters,
-and the built_in function-call counts, 27131 in all, are:
-= -- 2261
-> -- 641
-< -- 230
-+ -- 350
-- -- 116
-* -- 1296
-:= -- 4107
-add.period$ -- 76
-call.type$ -- 36
-change.case$ -- 40
-chr.to.int$ -- 507
-cite$ -- 36
-duplicate$ -- 1971
-empty$ -- 2074
-format.name$ -- 141
-if$ -- 6299
+            1045 strings with 14490 characters,
+and the built_in function-call counts, 29061 in all, are:
+= -- 2412
+> -- 700
+< -- 241
++ -- 380
+- -- 128
+* -- 1389
+:= -- 4406
+add.period$ -- 82
+call.type$ -- 39
+change.case$ -- 43
+chr.to.int$ -- 531
+cite$ -- 39
+duplicate$ -- 2111
+empty$ -- 2224
+format.name$ -- 156
+if$ -- 6738
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 336
-newline$ -- 137
-num.names$ -- 37
-pop$ -- 754
+int.to.str$ -- 39
+missing$ -- 367
+newline$ -- 150
+num.names$ -- 40
+pop$ -- 839
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2109
+skip$ -- 2252
 stack$ -- 0
-substring$ -- 1271
-swap$ -- 1622
-text.length$ -- 61
+substring$ -- 1330
+swap$ -- 1730
+text.length$ -- 64
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 36
+type$ -- 39
 warning$ -- 0
-while$ -- 127
-width$ -- 38
-write$ -- 378
+while$ -- 134
+width$ -- 41
+write$ -- 409
 (There was 1 warning)

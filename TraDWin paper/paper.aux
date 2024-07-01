@@ -27,20 +27,22 @@
 \citation{arima}
 \citation{time_arima}
 \citation{sarima}
+\citation{Xu2016}
 \citation{trmf}
 \citation{btrmf}
 \citation{btrmf}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
 \newlabel{sec:related-works}{{II}{2}{Related Work}{}{}}
 \citation{gnn}
+\citation{li2018gnn}
+\citation{wavenet}
 \citation{raissi2017physics}
 \citation{lwr}
 \citation{ctm}
+\citation{vissim}
+\citation{sumo}
 \@writefile{toc}{\contentsline {section}{\numberline {III}\textbf  {Problem Formulation}}{3}{}\protected@file@percent }
 \newlabel{sec:problem-for}{{III}{3}{\textbf  {Problem Formulation}}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}System Model}{3}{}\protected@file@percent }
-\newlabel{sec:system-model}{{IV}{3}{System Model}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.}\textbf  {Data streaming framework}}{3}{}\protected@file@percent }
 \citation{scats}
 \citation{wiki:sydney_traffic_system}
 \citation{jain2019review}
@@ -49,6 +51,9 @@
 \citation{rose2006mobile}
 \citation{zhu2012probe}
 \citation{node2vec}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}System Model}{4}{}\protected@file@percent }
+\newlabel{sec:system-model}{{IV}{4}{System Model}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.}\textbf  {Data streaming framework}}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.}\textbf  {Model input}}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {(i)}Graph embedding generation using Node2Vec:}{4}{}\protected@file@percent }
 \citation{skipgram}
@@ -57,27 +62,25 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:framework}{{1}{5}{\textbf  {Data streaming framework}}{}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {(ii)}Traffic volume normalised:}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {(iii)}Word2Vec encoding of other exogenous variables:}{5}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Model architecture}}{6}{}\protected@file@percent }
 \newlabel{fig:dataset}{{2}{6}{Graph embedding generation using Node2Vec:}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.}\textbf  {Physics Informed Deep Learning}}{6}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {(iii)}Word2Vec encoding of other exogenous variables:}{6}{}\protected@file@percent }
 \citation{gain}
 \citation{wgan}
 \citation{gain}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.}\textbf  {Physics Informed Deep Learning}}{7}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.}TraDWin: Traffic Model}{7}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {(i)}\textit  {Generator:}}{7}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {(ii)}\textit  {Discriminator:}}{7}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {(iii)}\textit  {Hint}}{7}{}\protected@file@percent }
-\newlabel{prop:nonunique}{{1}{7}{\textit  {Hint}}{}{}}
 \citation{scats}
 \citation{met_historical_data}
 \citation{sumo}
 \citation{tapas}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {(iii)}\textit  {Hint}}{8}{}\protected@file@percent }
+\newlabel{prop:nonunique}{{1}{8}{\textit  {Hint}}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Experiments}{8}{}\protected@file@percent }
 \newlabel{sec:experiments}{{V}{8}{Experiments}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.}Dataset Description}{8}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Snapshot of sensor locations plotted along with road network from Overpass API}}{8}{}\protected@file@percent }
-\newlabel{fig:dataset}{{3}{8}{Dataset Description}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.}Model Parameters}{8}{}\protected@file@percent }
 \citation{arima}
 \citation{trmf}
@@ -85,6 +88,8 @@
 \citation{lrtc}
 \citation{dae}
 \citation{lstm}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Snapshot of sensor locations plotted along with road network from Overpass API}}{9}{}\protected@file@percent }
+\newlabel{fig:dataset}{{3}{9}{Dataset Description}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.}Baselines}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.}Evaluation metrics}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.}Results}{9}{}\protected@file@percent }
@@ -128,24 +133,27 @@
 \bibcite{arima}{20}
 \bibcite{time_arima}{21}
 \bibcite{sarima}{22}
-\bibcite{trmf}{23}
-\bibcite{btrmf}{24}
-\bibcite{gnn}{25}
-\bibcite{raissi2017physics}{26}
-\bibcite{lwr}{27}
-\bibcite{ctm}{28}
-\bibcite{jain2019review}{29}
-\bibcite{asha2018vehicle}{30}
-\bibcite{redmon2018yolov3}{31}
-\bibcite{skipgram}{32}
-\bibcite{tapas}{33}
-\bibcite{lrtc}{34}
-\bibcite{dae}{35}
-\bibcite{lstm}{36}
+\bibcite{Xu2016}{23}
+\bibcite{trmf}{24}
+\bibcite{btrmf}{25}
+\bibcite{gnn}{26}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Performance on re-assignment task (1 edge change) for different datasets}}{12}{}\protected@file@percent }
 \newlabel{reassign_table}{{I}{12}{Results}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{12}{}\protected@file@percent }
 \newlabel{sec:conclusion}{{VI}{12}{Conclusion}{}{}}
 \@writefile{toc}{\contentsline {section}{References}{12}{}\protected@file@percent }
+\bibcite{li2018gnn}{27}
+\bibcite{wavenet}{28}
+\bibcite{raissi2017physics}{29}
+\bibcite{lwr}{30}
+\bibcite{ctm}{31}
+\bibcite{jain2019review}{32}
+\bibcite{asha2018vehicle}{33}
+\bibcite{redmon2018yolov3}{34}
+\bibcite{skipgram}{35}
+\bibcite{tapas}{36}
+\bibcite{lrtc}{37}
+\bibcite{dae}{38}
+\bibcite{lstm}{39}
 \gdef\svg@ink@ver@settings{{\m@ne }{inkscape}{\m@ne }}
 \gdef \@abspage@last{13}

@@ -92,6 +92,9 @@ H.~Dong, L.~Jia, X.~Sun, C.~Li, and Y.~Qin, ``Road traffic flow prediction with 
 \bibitem{sarima}
 S.~V. Kumar and L.~Vanajakshi, ``Short-term traffic flow prediction using seasonal arima model with limited input data,'' \emph{European Transport Research Review}, vol.~7, pp. 1--9, 2015.
 
+\bibitem{Xu2016}
+C.~Xu, Z.~Li, and W.~Wang, ``Short-term traffic flow prediction using a methodology based on autoregressive integrated moving average and genetic programming,'' \emph{Transport}, vol.~31, no.~3, pp. 343--358, 2016.
+
 \bibitem{trmf}
 H.-F. Yu, N.~Rao, and I.~S. Dhillon, ``Temporal regularized matrix factorization for high-dimensional time series prediction,'' \emph{Advances in neural information processing systems}, vol.~29, 2016.
 
@@ -100,6 +103,16 @@ X.~Chen and L.~Sun, ``Bayesian temporal factorization for multidimensional time 
 
 \bibitem{gnn}
 J.~Zhou, G.~Cui, S.~Hu, Z.~Zhang, C.~Yang, Z.~Liu, L.~Wang, C.~Li, and M.~Sun, ``Graph neural networks: A review of methods and applications,'' \emph{AI open}, vol.~1, pp. 57--81, 2020.
+
+\bibitem{li2018gnn}
+\BIBentryALTinterwordspacing
+Y.~Li, R.~Yu, C.~Shahabi, and Y.~Liu, ``Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,'' 2018. [Online]. Available: \url{https://arxiv.org/abs/1707.01926}
+\BIBentrySTDinterwordspacing
+
+\bibitem{wavenet}
+\BIBentryALTinterwordspacing
+Z.~Wu, S.~Pan, G.~Long, J.~Jiang, and C.~Zhang, ``Graph wavenet for deep spatial-temporal graph modeling,'' 2019. [Online]. Available: \url{https://arxiv.org/abs/1906.00121}
+\BIBentrySTDinterwordspacing
 
 \bibitem{raissi2017physics}
 M.~Raissi, P.~Perdikaris, and G.~E. Karniadakis, ``Physics informed deep learning (part i): Data-driven solutions of nonlinear partial differential equations,'' \emph{arXiv preprint arXiv:1711.10561}, 2017.

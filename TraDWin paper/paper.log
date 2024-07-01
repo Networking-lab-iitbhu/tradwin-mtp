@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.21)  1 JUL 2024 17:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.5.21)  1 JUL 2024 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -619,14 +619,14 @@ Package caption Info: End \AtBeginDocument code.
 
 
 ]) (./related-work.tex [2]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) (./problem-formulation.tex
+)) (./problem-formulation.tex [3]
 Underfull \hbox (badness 3557) in paragraph at lines 20--21
 \OML/cmm/b/it/10 ^^_$ \OT1/ptm/m/n/10 of fea-ture vec-tors of ob-served his-tor-i-cal traf-
  []
@@ -636,7 +636,7 @@ Underfull \hbox (badness 2173) in paragraph at lines 20--21
 \OT1/ptm/m/n/10 fic flow over $\OML/cmm/m/it/10 T$ \OT1/ptm/m/n/10 con-sec-u-tive in-ter-vals, i.e., $\OML/cmm/b/it/10 ^^_ \OT1/cmr/m/n/10 =
  []
 
-) (./data-streaming.tex [3]
+) (./data-streaming.tex
 
 pdfTeX warning: pdflatex (file ./framework.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <framework.pdf, id=29, 501.79468pt x 362.3136pt>
@@ -647,17 +647,14 @@ Package pdftex.def Info: framework.pdf  used on input line 9.
 ) (./model-input.tex [4]
 
 pdfTeX warning: pdflatex (file ./model.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<model.pdf, id=35, 446.62859pt x 381.34468pt>
+<model.pdf, id=33, 446.62859pt x 381.34468pt>
 File: model.pdf Graphic file (type pdf)
 <use model.pdf>
 Package pdftex.def Info: model.pdf  used on input line 50.
 (pdftex.def)             Requested size: 438.60315pt x 374.48914pt.
-[5 <./framework.pdf>]) (./deep-learning.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./model.pdf>]) (./traffic-model.tex
+[5 <./framework.pdf>]) (./deep-learning.tex [6 <./model.pdf>]) (./traffic-model.tex [7]
 \c@proposition=\count326
- [7]) (./exp-setup.tex
+) (./exp-setup.tex
 
 LaTeX Warning: Citation `met_historical_data' on page 8 undefined on input line 12.
 
@@ -671,7 +668,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 18--19
  [][] 
  []
 
-[8 <./dataset.png>]) (./results.tex
+[8]) (./results.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 4.
@@ -685,7 +682,7 @@ Package epstopdf Info: Source file: <mape_pred.eps>
 (epstopdf)             Command: <repstopdf --outfile=mape_pred-eps-converted-to.pdf mape_pred.eps>
 (epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
-<mape_pred-eps-converted-to.pdf, id=123, 722.7pt x 361.35pt>
+<mape_pred-eps-converted-to.pdf, id=122, 722.7pt x 361.35pt>
 File: mape_pred-eps-converted-to.pdf Graphic file (type pdf)
 <use mape_pred-eps-converted-to.pdf>
 Package pdftex.def Info: mape_pred-eps-converted-to.pdf  used on input line 8.
@@ -699,11 +696,12 @@ Package epstopdf Info: Source file: <rmse_pred.eps>
 (epstopdf)             Command: <repstopdf --outfile=rmse_pred-eps-converted-to.pdf rmse_pred.eps>
 (epstopdf)             \includegraphics on input line 15.
 Package epstopdf Info: Output file is already uptodate.
-<rmse_pred-eps-converted-to.pdf, id=124, 722.7pt x 361.35pt>
+<rmse_pred-eps-converted-to.pdf, id=123, 722.7pt x 361.35pt>
 File: rmse_pred-eps-converted-to.pdf Graphic file (type pdf)
 <use rmse_pred-eps-converted-to.pdf>
 Package pdftex.def Info: rmse_pred-eps-converted-to.pdf  used on input line 15.
 (pdftex.def)             Requested size: 464.39685pt x 232.20055pt.
+[9 <./dataset.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 28.
@@ -717,7 +715,7 @@ Package epstopdf Info: Source file: <rmse_imput.eps>
 (epstopdf)             Command: <repstopdf --outfile=rmse_imput-eps-converted-to.pdf rmse_imput.eps>
 (epstopdf)             \includegraphics on input line 31.
 Package epstopdf Info: Output file is already uptodate.
-<rmse_imput-eps-converted-to.pdf, id=125, 505.89pt x 361.35pt>
+<rmse_imput-eps-converted-to.pdf, id=128, 505.89pt x 361.35pt>
 File: rmse_imput-eps-converted-to.pdf Graphic file (type pdf)
 <use rmse_imput-eps-converted-to.pdf>
 Package pdftex.def Info: rmse_imput-eps-converted-to.pdf  used on input line 31.
@@ -731,12 +729,18 @@ Package epstopdf Info: Source file: <mape_imput.eps>
 (epstopdf)             Command: <repstopdf --outfile=mape_imput-eps-converted-to.pdf mape_imput.eps>
 (epstopdf)             \includegraphics on input line 36.
 Package epstopdf Info: Output file is already uptodate.
-<mape_imput-eps-converted-to.pdf, id=126, 505.89pt x 361.35pt>
+<mape_imput-eps-converted-to.pdf, id=129, 505.89pt x 361.35pt>
 File: mape_imput-eps-converted-to.pdf Graphic file (type pdf)
 <use mape_imput-eps-converted-to.pdf>
 Package pdftex.def Info: mape_imput-eps-converted-to.pdf  used on input line 36.
 (pdftex.def)             Requested size: 258.0pt x 184.28606pt.
-[9]
+
+Underfull \vbox (badness 5374) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./mape_pred-eps-converted-to.pdf> <./rmse_pred-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <modif.eps>
 (epstopdf)                    date: 2024-05-25 13:04:24
 (epstopdf)                    size: 31475 bytes
@@ -746,39 +750,30 @@ Package epstopdf Info: Source file: <modif.eps>
 (epstopdf)             Command: <repstopdf --outfile=modif-eps-converted-to.pdf modif.eps>
 (epstopdf)             \includegraphics on input line 49.
 Package epstopdf Info: Output file is already uptodate.
-<modif-eps-converted-to.pdf, id=130, 361.35pt x 252.945pt>
+<modif-eps-converted-to.pdf, id=240, 361.35pt x 252.945pt>
 File: modif-eps-converted-to.pdf Graphic file (type pdf)
 <use modif-eps-converted-to.pdf>
 Package pdftex.def Info: modif-eps-converted-to.pdf  used on input line 49.
 (pdftex.def)             Requested size: 252.0pt x 176.4003pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 5374) has occurred while \output is active []
-
- [10 <./mape_pred-eps-converted-to.pdf> <./rmse_pred-eps-converted-to.pdf>]
 Underfull \vbox (badness 3612) has occurred while \output is active []
 
-
+ [11 <./rmse_imput-eps-converted-to.pdf> <./mape_imput-eps-converted-to.pdf> <./modif-eps-converted-to.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 60.
 
-) (./conclusion.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [11 <./rmse_imput-eps-converted-to.pdf> <./mape_imput-eps-converted-to.pdf> <./modif-eps-converted-to.pdf>]) (./paper.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+) (./conclusion.tex) (./paper.bbl [12]
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 []\OT1/ptm/m/n/8 ``Tapascologne - sumo doc-u-men-ta-tion,''
  []
 
 
-Underfull \hbox (badness 3460) in paragraph at lines 126--127
+Underfull \hbox (badness 3460) in paragraph at lines 139--140
 \OT1/ptm/m/n/8 https://sumo.dlr.de/docs/Data/Scenarios/TAPASCologne.html, ac-cessed
  []
 
-[12])
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -806,15 +801,15 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 11287 strings out of 474116
- 207850 string characters out of 5743682
- 1956187 words of memory out of 5000000
- 33357 multiletter control sequences out of 15000+600000
+ 11290 strings out of 474116
+ 207878 string characters out of 5743682
+ 1952187 words of memory out of 5000000
+ 33360 multiletter control sequences out of 15000+600000
  605180 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  94i,9n,93p,1883b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (13 pages, 939856 bytes).
+Output written on paper.pdf (13 pages, 942025 bytes).
 PDF statistics:
  435 PDF objects out of 1000 (max. 8388607)
  161 compressed objects within 2 object streams
