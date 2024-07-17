@@ -32,7 +32,7 @@
 \citation{btrmf}
 \citation{btrmf}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}{}\protected@file@percent }
-\newlabel{sec:related-works}{{II}{2}{Related Work}{}{}}
+\newlabel{sec:related-works}{{II}{2}}
 \citation{gnn}
 \citation{li2018gnn}
 \citation{wavenet}
@@ -42,7 +42,9 @@
 \citation{vissim}
 \citation{sumo}
 \@writefile{toc}{\contentsline {section}{\numberline {III}\textbf  {Problem Formulation}}{3}{}\protected@file@percent }
-\newlabel{sec:problem-for}{{III}{3}{\textbf  {Problem Formulation}}{}{}}
+\newlabel{sec:problem-for}{{III}{3}}
+\newlabel{eq:X}{{1}{3}}
+\newlabel{eq:chi}{{2}{3}}
 \citation{scats}
 \citation{wiki:sydney_traffic_system}
 \citation{jain2019review}
@@ -52,63 +54,64 @@
 \citation{zhu2012probe}
 \citation{node2vec}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}System Model}{4}{}\protected@file@percent }
-\newlabel{sec:system-model}{{IV}{4}{System Model}{}{}}
+\newlabel{sec:system-model}{{IV}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.}\textbf  {Data streaming framework}}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.}\textbf  {Model input}}{4}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {(i)}Graph embedding generation using Node2Vec:}{4}{}\protected@file@percent }
+\newlabel{subsubsec:embd}{{(i)}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Traffic Digital Twin (TDT) data processing\relax }}{5}{}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:framework}{{1}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {(ii)}Normalizing traffic volume}{5}{}\protected@file@percent }
+\newlabel{subsubsec:normal}{{(ii)}{5}}
 \citation{skipgram}
 \citation{word2vec}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Traffic Digital Twin (TDT) data processing}}{5}{}\protected@file@percent }
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:framework}{{1}{5}{\textbf  {Data streaming framework}}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {(ii)}Traffic volume normalised:}{5}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Model architecture}}{6}{}\protected@file@percent }
-\newlabel{fig:dataset}{{2}{6}{Graph embedding generation using Node2Vec:}{}{}}
+\citation{word2vec}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Model architecture\relax }}{6}{}\protected@file@percent }
+\newlabel{fig:dataset}{{2}{6}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {(iii)}Word2Vec encoding of other exogenous variables:}{6}{}\protected@file@percent }
+\newlabel{subsubsec:encode}{{(iii)}{6}}
 \citation{gain}
 \citation{wgan}
-\citation{gain}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.}\textbf  {Physics Informed Deep Learning}}{7}{}\protected@file@percent }
+\newlabel{eq:cl}{{3}{7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.}TraDWin: Traffic Model}{7}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {(i)}\textit  {Generator:}}{7}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {(ii)}\textit  {Discriminator:}}{7}{}\protected@file@percent }
+\citation{gain}
 \citation{scats}
 \citation{met_historical_data}
 \citation{sumo}
 \citation{tapas}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {(ii)}\textit  {Discriminator:}}{8}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {(iii)}\textit  {Hint}}{8}{}\protected@file@percent }
-\newlabel{prop:nonunique}{{1}{8}{\textit  {Hint}}{}{}}
+\newlabel{prop:nonunique}{{1}{8}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Experiments}{8}{}\protected@file@percent }
-\newlabel{sec:experiments}{{V}{8}{Experiments}{}{}}
+\newlabel{sec:experiments}{{V}{8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.}Dataset Description}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.}Model Parameters}{8}{}\protected@file@percent }
 \citation{arima}
 \citation{trmf}
 \citation{btrmf}
 \citation{lrtc}
 \citation{dae}
 \citation{lstm}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Snapshot of sensor locations plotted along with road network from Overpass API}}{9}{}\protected@file@percent }
-\newlabel{fig:dataset}{{3}{9}{Dataset Description}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Snapshot of sensor locations plotted along with road network from Overpass API\relax }}{9}{}\protected@file@percent }
+\newlabel{fig:dataset}{{3}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.}Model Parameters}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.}Baselines}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.}Evaluation metrics}{9}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.}Results}{9}{}\protected@file@percent }
-\newlabel{fig:mape_pred}{{4a}{10}{Results}{}{}}
-\newlabel{sub@fig:mape_pred}{{a}{10}{Results}{}{}}
-\newlabel{fig:rmse_pred}{{4b}{10}{Results}{}{}}
-\newlabel{sub@fig:rmse_pred}{{b}{10}{Results}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Performance metrics on prediction task for different deltas (timesteps to predict ahead)}}{10}{}\protected@file@percent }
-\newlabel{fig:pred_metrics}{{4}{10}{Results}{}{}}
+\newlabel{fig:mape_pred}{{4a}{10}}
+\newlabel{sub@fig:mape_pred}{{a}{10}}
+\newlabel{fig:rmse_pred}{{4b}{10}}
+\newlabel{sub@fig:rmse_pred}{{b}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Performance metrics on prediction task for different deltas (timesteps to predict ahead)\relax }}{10}{}\protected@file@percent }
+\newlabel{fig:pred_metrics}{{4}{10}}
 \citation{sumo}
 \citation{vissim}
-\newlabel{fig:mape_imput}{{5a}{11}{Results}{}{}}
-\newlabel{sub@fig:mape_imput}{{a}{11}{Results}{}{}}
-\newlabel{fig:rmse_imput}{{5b}{11}{Results}{}{}}
-\newlabel{sub@fig:rmse_imput}{{b}{11}{Results}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Imputation comparison for different missing rates}}{11}{}\protected@file@percent }
-\newlabel{fig:imput}{{5}{11}{Results}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces MAPE and RMSE on re-assignment task vs number of edges modified}}{11}{}\protected@file@percent }
-\newlabel{fig:edge_modif}{{6}{11}{Results}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Performance on re-assignment task (1 edge change) for different datasets\relax }}{11}{}\protected@file@percent }
+\newlabel{reassign_table}{{I}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{11}{}\protected@file@percent }
+\newlabel{sec:conclusion}{{VI}{11}}
 \bibstyle{IEEEtran}
 \bibdata{references}
 \bibcite{levy2010evaluation}{1}
@@ -126,6 +129,15 @@
 \bibcite{weather}{13}
 \bibcite{holiday}{14}
 \bibcite{node2vec}{15}
+\newlabel{fig:mape_imput}{{5a}{12}}
+\newlabel{sub@fig:mape_imput}{{a}{12}}
+\newlabel{fig:rmse_imput}{{5b}{12}}
+\newlabel{sub@fig:rmse_imput}{{b}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Imputation comparison for different missing rates\relax }}{12}{}\protected@file@percent }
+\newlabel{fig:imput}{{5}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces MAPE and RMSE on re-assignment task vs number of edges modified\relax }}{12}{}\protected@file@percent }
+\newlabel{fig:edge_modif}{{6}{12}}
+\@writefile{toc}{\contentsline {section}{References}{12}{}\protected@file@percent }
 \bibcite{word2vec}{16}
 \bibcite{gain}{17}
 \bibcite{wgan}{18}
@@ -137,11 +149,6 @@
 \bibcite{trmf}{24}
 \bibcite{btrmf}{25}
 \bibcite{gnn}{26}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Performance on re-assignment task (1 edge change) for different datasets}}{12}{}\protected@file@percent }
-\newlabel{reassign_table}{{I}{12}{Results}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{12}{}\protected@file@percent }
-\newlabel{sec:conclusion}{{VI}{12}{Conclusion}{}{}}
-\@writefile{toc}{\contentsline {section}{References}{12}{}\protected@file@percent }
 \bibcite{li2018gnn}{27}
 \bibcite{wavenet}{28}
 \bibcite{raissi2017physics}{29}

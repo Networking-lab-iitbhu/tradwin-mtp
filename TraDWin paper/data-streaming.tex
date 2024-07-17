@@ -2,7 +2,9 @@
 \section{System Model}\label{sec:system-model}
 \subsection{\textbf{Data streaming framework}}
 
-Reliable real-time data collection is a crucial aspect and prerequisite of a digital twin to effectively update internal parameters and synchronize with the real world. The Traffic Digital Twin (TDT), \name, presented in this paper requires real-time traffic volume data as input. We aim to use absolute traffic volume counts available at a manageable low frequency of 15 minutes to one hour. While systems with more sophisticated data at a higher frequency can be proposed, we aim to keep the real-world collection infrastructure cheap, simple, and based on already existing systems around the world. In particular, we strive to cater to the following objectives:
+Reliable real-time data collection is a crucial aspect and prerequisite of a digital twin to effectively update internal parameters and synchronize with the real world. The Traffic Digital Twin (TDT), \name, presented in this paper, requires real-time traffic volume data as input. We aim to use absolute traffic volume counts available at a manageable low frequency of 15 minutes to one hour. While systems with more sophisticated data at a higher frequency can be proposed, our goal is to maintain the collection infrastructure as affordable, straightforward, and compatible with already existing systems globally. 
+
+Our proposed system aims to ensure practicality and adaptability as follows. First, the hardware infrastructure should be inexpensive and easily replaceable. Second, the system should be easily extendable to incorporate various data sources. Third, it should function effectively using only absolute traffic counts, without requiring additional specific information such as direction and vehicle types. Finally, the system should operate with a medium-frequency update.
 
 \begin{figure*}[t]
   \centering
@@ -11,21 +13,22 @@ Reliable real-time data collection is a crucial aspect and prerequisite of a dig
   \label{fig:framework}
 \end{figure*}
 
-\begin{enumerate}[(i)]
-    \item Hardware infrastructure should be cheap and easily replaceable.
-    \item Easily extendable to use a variety of different sources.
-    \item Should work with only absolute traffic counts, no other specific information like direction and vehicle types.
-    \item Should work with a medium-frequency update.
-\end{enumerate}
+% \begin{enumerate}[(i)]
+%     \item Hardware infrastructure should be cheap and easily replaceable.
+%     \item Easily extendable to use a variety of different sources.
+%     \item Should work with only absolute traffic counts, no other specific information like direction and vehicle types.
+%     \item Should work with a medium-frequency update.
+% \end{enumerate}
 
-There are various possible ways to collect the type of data mentioned. The most reliable would be to install inductive loop detectors embedded in road surfaces at city intersections. Such systems are already available and in use in several major cities. For example, the Sydney Coordinated Adaptive Traffic System (SCATS)\cite{scats} is available in over 180 cities across 28 countries, including New Zealand, Dublin, Shanghai, and Hong Kong \cite{wiki:sydney_traffic_system}. New York City's Adaptive Traffic Control System (ATCS), Adaptive Signal Control Technology (ASCT), SCOOT, and ACS are other such systems that are used to control traffic signal timings and optimize congestion. Such systems can be easily extended to use with our proposed model since we only use absolute traffic volume counts, which such systems are capable of collecting.
+Various methods can be employed to collect the necessary data. The most reliable method involves installing inductive loop detectors embedded in road surfaces at city intersections. These systems are already operational in several major cities. For instance, the Sydney Coordinated Adaptive Traffic System (SCATS)~\cite{scats} is utilized in over 180 cities across 28 countries, including New Zealand, Dublin, Shanghai, and Hong Kong~\cite{wiki:sydney_traffic_system}. Other examples include New York City's Adaptive Traffic Control System (ATCS), Adaptive Signal Control Technology (ASCT), SCOOT, and ACS, which are designed to control traffic signal timings and mitigate congestion. These systems can be seamlessly integrated with our proposed model, as they are capable of collecting the absolute traffic volume counts required for our analysis.
 
-Another possible data source can be surveillance cameras assisted with computer vision models\cite{jain2019review}, which is already used in practice at some intersections in Shenzhen, China. Several existing studies\cite{asha2018vehicle} using state-of-the-art object detection models like YOLO\cite{redmon2018yolov3} demonstrate the effectiveness of this method. Such a model-based approach allows for cheap and effective traffic monitoring on top of existing surveillance camera infrastructure. 
+Another potential data source involves the use of surveillance cameras combined with computer vision models \cite{jain2019review}, which are already implemented at certain intersections in Shenzhen, China. Several existing studies \cite{asha2018vehicle} employing state-of-the-art object detection models, such as YOLO \cite{redmon2018yolov3}, have demonstrated the effectiveness of this method. This model-based approach enables cost-effective and efficient traffic monitoring utilizing the existing surveillance camera infrastructure.
 
-Other methods like using GPS-enabled mobile phones\cite{rose2006mobile} to track urban traffic flow, as Google does in its Maps product, and the use of probe vehicles\cite{zhu2012probe}, which are vehicles equipped with detectors that may be taxis or public transport, can also be used to approximate traffic volume based on their data.
 
-We aim for our model to work in conjunction with multiple data streams, as different parts of the road network may be served with different data sources. We want our TDT to integrate with these sources seamlessly, so we need an aggregator of sorts to reconcile the data from the different streams and store them in a data lake. This data can then be used by the TDT model to keep its internal state in sync with real-world data.
+Other methods, such as using GPS-enabled mobile phones \cite{rose2006mobile} to track urban traffic flow, as implemented by Google in its Maps product, and the use of probe vehicles \cite{zhu2012probe}, which are vehicles equipped with detectors that may be taxis or public transport, can also be utilized to approximate traffic volume based on their data.
 
-The deployed aggregator system will have an RPC and API interface that can be interacted with by the remote sensors and other data sources. Each service can have a separate interface built for interacting with the aggregator service. The aggregator then stores all the data with relevant meta information in a datalake, a centralized repository that allows you to store all your structured and unstructured data. We make use of a datalake as different sources might have additional information apart from just traffic volume counts, and by allowing us to store other complementary information, we leave possible avenues for building up further capabilities in our TDT.
+We aim for our model to work in conjunction with multiple data streams, as different parts of the road network may be served with different data sources. We want our TDT to integrate with these sources seamlessly, so we need an aggregator to reconcile the data from the different streams and store them in a data lake. This data can then be used by the TDT model to keep its internal state in sync with real-world data.
 
-An example representing a simplified view of the aforementioned process is shown in Fig. \ref{fig:framework}.
+One way to deploy the aggregator system is to equip it with both RPC and API interfaces for interaction with remote sensors and various data sources. Each service can integrate a separate interface specifically designed to interface with the aggregator. Subsequently, the aggregator consolidates all incoming data, along with relevant meta information, into a datalake—a centralized repository capable of handling both structured and unstructured data. This approach leverages the datalake's capacity to store additional information beyond traffic volume counts from diverse sources, paving the way for potential future enhancements and expansions of the Traffic Digital Twin (TDT)'s capabilities.
+
+A simplified representation of the aforementioned process is depicted in Fig. \ref{fig:framework}.
