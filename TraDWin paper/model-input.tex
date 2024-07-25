@@ -74,7 +74,7 @@ In our methodology, we employ \textit{Word2Vec} \cite{word2vec} to encode variou
 
 Concatenating the feature vectors obtained from Sections~\ref{subsubsec:embd} to \ref{subsubsec:encode}, we derive the final input vector for our model. Extending upon the notation introduced in Section~\ref{sec:problem-for}, for $N$ nodes, we define $\mathbf{x}_i^t$, the feature vector of node $i$ at time $t$. Assuming the use of \textit{Node2Vec} as described in (i) to generate $R^{D_g}$-dimensional graph embeddings $g_i$ for each node $i$, and normalizing $n$ single-dimensional real-valued features $(r_1, r_2, \ldots, r_n)$ as outlined in (ii) to $(r_1^{\text{norm}}, r_2^{\text{norm}}, \ldots, r_n^{\text{norm}})$, resulting in a $D_n = n$ dimensional vector $h_i^t$. Additionally, leveraging \textit{Word2Vec} to produce $d_w$ dimensional vectors for $m$ semantic "words" related to each node, we obtain a $R^{m \times d_w}$-dimensional vector flattened and represented as $k_i^t \in R^{D_w}$, where $D_w = m \times d_w$.
 
-Finally, by concatenating the feature vectors described in Section~\ref{subsubsec:embd}-~\ref{subsubsec:encode}, we obtain the feature vector of node $i$ at time $t$:
+Finally, by concatenating the feature vectors described in Section~\ref{subsubsec:embd} -~\ref{subsubsec:encode}, we obtain the feature vector of node $i$ at time $t$:
 \[
 \mathbf{x}_i^t = ( g_i || h_i^t || k_i^t ) \in \mathbb{R}^D
 \]

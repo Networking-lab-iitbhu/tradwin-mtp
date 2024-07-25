@@ -7,8 +7,7 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
-  \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -22,208 +21,130 @@
 \BIBdecl
 
 \bibitem{levy2010evaluation}
-J.~I. Levy, J.~J. Buonocore, and K.~von Stackelberg, ``Evaluation of the public
-  health impacts of traffic congestion: a health risk assessment,''
-  \emph{Environmental health}, vol.~9, p.~65, 2010.
+J.~I. Levy, J.~J. Buonocore, and K.~von Stackelberg, ``Evaluation of the public health impacts of traffic congestion: a health risk assessment,'' \emph{Environmental health}, vol.~9, p.~65, 2010.
 
 \bibitem{gorea2016financial}
-R.~Gorea, ``Financial impact of road traffic accidents on the society,''
-  \emph{IJETV}, vol.~2, no.~01, pp. 6--9, Jun. 2016.
+R.~Gorea, ``Financial impact of road traffic accidents on the society,'' \emph{IJETV}, vol.~2, no.~01, pp. 6--9, Jun. 2016.
 
 \bibitem{anciaes2017social}
-P.~R. Anciaes, P.~J. Metcalfe, and C.~Heywood, ``Social impacts of road
-  traffic: perceptions and priorities of local residents,'' \emph{Impact
-  Assessment and Project Appraisal}, vol.~35, no.~2, pp. 172--183, 2017.
+P.~R. Anciaes, P.~J. Metcalfe, and C.~Heywood, ``Social impacts of road traffic: perceptions and priorities of local residents,'' \emph{Impact Assessment and Project Appraisal}, vol.~35, no.~2, pp. 172--183, 2017.
 
 \bibitem{guo2017mobile}
-Y.~Guo, X.~Hu, B.~Hu, J.~Cheng, M.~Zhou, and R.~Y. Kwok, ``Mobile cyber
-  physical systems: Current challenges and future networking applications,''
-  \emph{IEEE Access}, vol.~6, pp. 12\,360--12\,368, 2017.
+Y.~Guo, X.~Hu, B.~Hu, J.~Cheng, M.~Zhou, and R.~Y. Kwok, ``Mobile cyber physical systems: Current challenges and future networking applications,'' \emph{IEEE Access}, vol.~6, pp. 12\,360--12\,368, 2017.
 
 \bibitem{singh2021digital}
 \BIBentryALTinterwordspacing
-M.~Singh, E.~Fuenmayor, E.~P. Hinchy, Y.~Qiao, N.~Murray, and D.~Devine,
-  ``Digital twin: Origin to future,'' \emph{Applied System Innovation}, vol.~4,
-  no.~2, p.~36, 2021. [Online]. Available:
-  \url{https://doi.org/10.3390/asi4020036}
+M.~Singh, E.~Fuenmayor, E.~P. Hinchy, Y.~Qiao, N.~Murray, and D.~Devine, ``Digital twin: Origin to future,'' \emph{Applied System Innovation}, vol.~4, no.~2, p.~36, 2021. [Online]. Available: \url{https://doi.org/10.3390/asi4020036}
 \BIBentrySTDinterwordspacing
 
 \bibitem{VANDERHORN2021113524}
 \BIBentryALTinterwordspacing
-E.~VanDerHorn and S.~Mahadevan, ``Digital twin: Generalization,
-  characterization and implementation,'' \emph{Decision Support Systems}, vol.
-  145, p. 113524, 2021. [Online]. Available:
-  \url{https://www.sciencedirect.com/science/article/pii/S0167923621000348}
+E.~VanDerHorn and S.~Mahadevan, ``Digital twin: Generalization, characterization and implementation,'' \emph{Decision Support Systems}, vol. 145, p. 113524, 2021. [Online]. Available: \url{https://www.sciencedirect.com/science/article/pii/S0167923621000348}
 \BIBentrySTDinterwordspacing
 
 \bibitem{scats}
-A.~Sims and K.~Dobinson, ``The sydney coordinated adaptive traffic (scat)
-  system philosophy and benefits,'' \emph{IEEE Transactions on Vehicular
-  Technology}, vol.~29, no.~2, pp. 130--137, 1980.
+A.~Sims and K.~Dobinson, ``The sydney coordinated adaptive traffic (scat) system philosophy and benefits,'' \emph{IEEE Transactions on Vehicular Technology}, vol.~29, no.~2, pp. 130--137, 1980.
 
 \bibitem{wiki:sydney_traffic_system}
 \BIBentryALTinterwordspacing
-{Wikipedia contributors}, ``Sydney coordinated adaptive traffic system ---
-  {Wikipedia}{,} the free encyclopedia,'' 2022, online; accessed 25-April-2024.
-  [Online]. Available: \url{https://en.wikipedia.org/wiki/Sydney\_Coordinated
-  \_Adaptive\_Traffic\_System}
+{Wikipedia contributors}, ``Sydney coordinated adaptive traffic system --- {Wikipedia}{,} the free encyclopedia,'' 2022, online; accessed 25-April-2024. [Online]. Available: \url{https://en.wikipedia.org/wiki/Sydney\_Coordinated \_Adaptive\_Traffic\_System}
 \BIBentrySTDinterwordspacing
 
 \bibitem{zhu2012probe}
-Y.~Zhu, Z.~Li, H.~Zhu, M.~Li, and Q.~Zhang, ``A compressive sensing approach to
-  urban traffic estimation with probe vehicles,'' \emph{IEEE Transactions on
-  Mobile Computing}, vol.~12, no.~11, pp. 2289--2302, 2012.
+Y.~Zhu, Z.~Li, H.~Zhu, M.~Li, and Q.~Zhang, ``A compressive sensing approach to urban traffic estimation with probe vehicles,'' \emph{IEEE Transactions on Mobile Computing}, vol.~12, no.~11, pp. 2289--2302, 2012.
 
 \bibitem{rose2006mobile}
-G.~Rose, ``Mobile phones as traffic probes: practices, prospects and issues,''
-  \emph{Transport Reviews}, vol.~26, no.~3, pp. 275--291, 2006.
+G.~Rose, ``Mobile phones as traffic probes: practices, prospects and issues,'' \emph{Transport Reviews}, vol.~26, no.~3, pp. 275--291, 2006.
 
 \bibitem{sumo}
-D.~Krajzewicz, ``Traffic simulation with sumo--simulation of urban mobility,''
-  \emph{Fundamentals of traffic simulation}, pp. 269--293, 2010.
+D.~Krajzewicz, ``Traffic simulation with sumo--simulation of urban mobility,'' \emph{Fundamentals of traffic simulation}, pp. 269--293, 2010.
 
 \bibitem{vissim}
-M.~Fellendorf and P.~Vortisch, ``Microscopic traffic flow simulator vissim,''
-  \emph{Fundamentals of traffic simulation}, pp. 63--93, 2010.
+M.~Fellendorf and P.~Vortisch, ``Microscopic traffic flow simulator vissim,'' \emph{Fundamentals of traffic simulation}, pp. 63--93, 2010.
 
 \bibitem{weather}
-M.~Cools, E.~Moons, and G.~Wets, ``Assessing the impact of weather on traffic
-  intensity,'' \emph{Weather, Climate, and Society}, vol.~2, no.~1, pp. 60--68,
-  2010.
+M.~Cools, E.~Moons, and G.~Wets, ``Assessing the impact of weather on traffic intensity,'' \emph{Weather, Climate, and Society}, vol.~2, no.~1, pp. 60--68, 2010.
 
 \bibitem{holiday}
-------, ``Investigating the variability in daily traffic counts through use of
-  arimax and sarimax models: assessing the effect of holidays on two site
-  locations,'' \emph{Transportation research record}, vol. 2136, no.~1, pp.
-  57--66, 2009.
+------, ``Investigating the variability in daily traffic counts through use of arimax and sarimax models: assessing the effect of holidays on two site locations,'' \emph{Transportation research record}, vol. 2136, no.~1, pp. 57--66, 2009.
 
 \bibitem{node2vec}
-A.~Grover and J.~Leskovec, ``node2vec: Scalable feature learning for
-  networks,'' in \emph{Proceedings of the 22nd ACM SIGKDD international
-  conference on Knowledge discovery and data mining}, 2016, pp. 855--864.
+A.~Grover and J.~Leskovec, ``node2vec: Scalable feature learning for networks,'' in \emph{Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining}, 2016, pp. 855--864.
 
 \bibitem{word2vec}
-T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean, ``Efficient estimation of word
-  representations in vector space,'' 2013.
+T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean, ``Efficient estimation of word representations in vector space,'' 2013.
 
 \bibitem{gain}
-J.~Yoon, J.~Jordon, and M.~Schaar, ``Gain: Missing data imputation using
-  generative adversarial nets,'' in \emph{International conference on machine
-  learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2018, pp. 5689--5698.
+J.~Yoon, J.~Jordon, and M.~Schaar, ``Gain: Missing data imputation using generative adversarial nets,'' in \emph{International conference on machine learning}.\hskip 1em plus 0.5em minus 0.4em\relax PMLR, 2018, pp. 5689--5698.
 
 \bibitem{wgan}
 M.~Arjovsky, S.~Chintala, and L.~Bottou, ``Wasserstein gan,'' 2017.
 
 \bibitem{pidl}
-A.~J. Huang and S.~Agarwal, ``Physics-informed deep learning for traffic state
-  estimation: Illustrations with lwr and ctm models,'' \emph{IEEE Open Journal
-  of Intelligent Transportation Systems}, vol.~3, pp. 503--518, 2022.
+A.~J. Huang and S.~Agarwal, ``Physics-informed deep learning for traffic state estimation: Illustrations with lwr and ctm models,'' \emph{IEEE Open Journal of Intelligent Transportation Systems}, vol.~3, pp. 503--518, 2022.
 
 \bibitem{arima}
-R.~Adhikari and R.~K. Agrawal, ``An introductory study on time series modeling
-  and forecasting,'' \emph{arXiv preprint arXiv:1302.6613}, 2013.
+R.~Adhikari and R.~K. Agrawal, ``An introductory study on time series modeling and forecasting,'' \emph{arXiv preprint arXiv:1302.6613}, 2013.
 
 \bibitem{time_arima}
-H.~Dong, L.~Jia, X.~Sun, C.~Li, and Y.~Qin, ``Road traffic flow prediction with
-  a time-oriented arima model,'' in \emph{2009 Fifth International Joint
-  Conference on INC, IMS and IDC}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
-  2009, pp. 1649--1652.
+H.~Dong, L.~Jia, X.~Sun, C.~Li, and Y.~Qin, ``Road traffic flow prediction with a time-oriented arima model,'' in \emph{2009 Fifth International Joint Conference on INC, IMS and IDC}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2009, pp. 1649--1652.
 
 \bibitem{sarima}
-S.~V. Kumar and L.~Vanajakshi, ``Short-term traffic flow prediction using
-  seasonal arima model with limited input data,'' \emph{European Transport
-  Research Review}, vol.~7, pp. 1--9, 2015.
+S.~V. Kumar and L.~Vanajakshi, ``Short-term traffic flow prediction using seasonal arima model with limited input data,'' \emph{European Transport Research Review}, vol.~7, pp. 1--9, 2015.
 
 \bibitem{Xu2016}
-C.~Xu, Z.~Li, and W.~Wang, ``Short-term traffic flow prediction using a
-  methodology based on autoregressive integrated moving average and genetic
-  programming,'' \emph{Transport}, vol.~31, no.~3, pp. 343--358, 2016.
+C.~Xu, Z.~Li, and W.~Wang, ``Short-term traffic flow prediction using a methodology based on autoregressive integrated moving average and genetic programming,'' \emph{Transport}, vol.~31, no.~3, pp. 343--358, 2016.
 
 \bibitem{trmf}
-H.-F. Yu, N.~Rao, and I.~S. Dhillon, ``Temporal regularized matrix
-  factorization for high-dimensional time series prediction,'' \emph{Advances
-  in neural information processing systems}, vol.~29, 2016.
+H.-F. Yu, N.~Rao, and I.~S. Dhillon, ``Temporal regularized matrix factorization for high-dimensional time series prediction,'' \emph{Advances in neural information processing systems}, vol.~29, 2016.
 
 \bibitem{btrmf}
-X.~Chen and L.~Sun, ``Bayesian temporal factorization for multidimensional time
-  series prediction,'' \emph{IEEE Transactions on Pattern Analysis and Machine
-  Intelligence}, vol.~44, no.~9, pp. 4659--4673, 2021.
+X.~Chen and L.~Sun, ``Bayesian temporal factorization for multidimensional time series prediction,'' \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, vol.~44, no.~9, pp. 4659--4673, 2021.
 
 \bibitem{gnn}
-J.~Zhou, G.~Cui, S.~Hu, Z.~Zhang, C.~Yang, Z.~Liu, L.~Wang, C.~Li, and M.~Sun,
-  ``Graph neural networks: A review of methods and applications,'' \emph{AI
-  open}, vol.~1, pp. 57--81, 2020.
+J.~Zhou, G.~Cui, S.~Hu, Z.~Zhang, C.~Yang, Z.~Liu, L.~Wang, C.~Li, and M.~Sun, ``Graph neural networks: A review of methods and applications,'' \emph{AI open}, vol.~1, pp. 57--81, 2020.
 
 \bibitem{li2018gnn}
 \BIBentryALTinterwordspacing
-Y.~Li, R.~Yu, C.~Shahabi, and Y.~Liu, ``Diffusion convolutional recurrent
-  neural network: Data-driven traffic forecasting,'' 2018. [Online]. Available:
-  \url{https://arxiv.org/abs/1707.01926}
+Y.~Li, R.~Yu, C.~Shahabi, and Y.~Liu, ``Diffusion convolutional recurrent neural network: Data-driven traffic forecasting,'' 2018. [Online]. Available: \url{https://arxiv.org/abs/1707.01926}
 \BIBentrySTDinterwordspacing
 
 \bibitem{wavenet}
 \BIBentryALTinterwordspacing
-Z.~Wu, S.~Pan, G.~Long, J.~Jiang, and C.~Zhang, ``Graph wavenet for deep
-  spatial-temporal graph modeling,'' 2019. [Online]. Available:
-  \url{https://arxiv.org/abs/1906.00121}
+Z.~Wu, S.~Pan, G.~Long, J.~Jiang, and C.~Zhang, ``Graph wavenet for deep spatial-temporal graph modeling,'' 2019. [Online]. Available: \url{https://arxiv.org/abs/1906.00121}
 \BIBentrySTDinterwordspacing
 
 \bibitem{raissi2017physics}
-M.~Raissi, P.~Perdikaris, and G.~E. Karniadakis, ``Physics informed deep
-  learning (part i): Data-driven solutions of nonlinear partial differential
-  equations,'' \emph{arXiv preprint arXiv:1711.10561}, 2017.
+M.~Raissi, P.~Perdikaris, and G.~E. Karniadakis, ``Physics informed deep learning (part i): Data-driven solutions of nonlinear partial differential equations,'' \emph{arXiv preprint arXiv:1711.10561}, 2017.
 
 \bibitem{lwr}
-G.~Wong and S.~Wong, ``A multi-class traffic flow model--an extension of lwr
-  model with heterogeneous drivers,'' \emph{Transportation Research Part A:
-  Policy and Practice}, vol.~36, no.~9, pp. 827--841, 2002.
+G.~Wong and S.~Wong, ``A multi-class traffic flow model--an extension of lwr model with heterogeneous drivers,'' \emph{Transportation Research Part A: Policy and Practice}, vol.~36, no.~9, pp. 827--841, 2002.
 
 \bibitem{ctm}
-C.~F. Daganzo, ``The cell transmission model: A dynamic representation of
-  highway traffic consistent with the hydrodynamic theory,''
-  \emph{Transportation research part B: methodological}, vol.~28, no.~4, pp.
-  269--287, 1994.
+C.~F. Daganzo, ``The cell transmission model: A dynamic representation of highway traffic consistent with the hydrodynamic theory,'' \emph{Transportation research part B: methodological}, vol.~28, no.~4, pp. 269--287, 1994.
 
 \bibitem{jain2019review}
-N.~K. Jain, R.~Saini, and P.~Mittal, ``A review on traffic monitoring system
-  techniques,'' \emph{Soft computing: Theories and applications: Proceedings of
-  SoCTA 2017}, pp. 569--577, 2019.
+N.~K. Jain, R.~Saini, and P.~Mittal, ``A review on traffic monitoring system techniques,'' \emph{Soft computing: Theories and applications: Proceedings of SoCTA 2017}, pp. 569--577, 2019.
 
 \bibitem{asha2018vehicle}
-C.~Asha and A.~Narasimhadhan, ``Vehicle counting for traffic management system
-  using yolo and correlation filter,'' in \emph{2018 IEEE International
-  Conference on Electronics, Computing and Communication Technologies
-  (CONECCT)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 1--6.
+C.~Asha and A.~Narasimhadhan, ``Vehicle counting for traffic management system using yolo and correlation filter,'' in \emph{2018 IEEE International Conference on Electronics, Computing and Communication Technologies (CONECCT)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2018, pp. 1--6.
 
 \bibitem{redmon2018yolov3}
-J.~Redmon and A.~Farhadi, ``Yolov3: An incremental improvement,'' \emph{arXiv
-  preprint arXiv:1804.02767}, 2018.
+J.~Redmon and A.~Farhadi, ``Yolov3: An incremental improvement,'' \emph{arXiv preprint arXiv:1804.02767}, 2018.
 
 \bibitem{skipgram}
-T.~Mikolov, I.~Sutskever, K.~Chen, G.~S. Corrado, and J.~Dean, ``Distributed
-  representations of words and phrases and their compositionality,'' in
-  \emph{Advances in Neural Information Processing Systems}, C.~Burges,
-  L.~Bottou, M.~Welling, Z.~Ghahramani, and K.~Weinberger, Eds., vol.~26.\hskip
-  1em plus 0.5em minus 0.4em\relax Curran Associates, Inc., 2013.
+T.~Mikolov, I.~Sutskever, K.~Chen, G.~S. Corrado, and J.~Dean, ``Distributed representations of words and phrases and their compositionality,'' in \emph{Advances in Neural Information Processing Systems}, C.~Burges, L.~Bottou, M.~Welling, Z.~Ghahramani, and K.~Weinberger, Eds., vol.~26.\hskip 1em plus 0.5em minus 0.4em\relax Curran Associates, Inc., 2013.
 
 \bibitem{tapas}
-``Tapascologne - sumo documentation,''
-  \url{https://sumo.dlr.de/docs/Data/Scenarios/TAPASCologne.html}, accessed on
-  14th May 2024.
+``Tapascologne - sumo documentation,'' \url{https://sumo.dlr.de/docs/Data/Scenarios/TAPASCologne.html}, accessed on 14th May 2024.
 
 \bibitem{lrtc}
-X.~Chen, J.~Yang, and L.~Sun, ``A nonconvex low-rank tensor completion model
-  for spatiotemporal traffic data imputation,'' \emph{Transportation Research
-  Part C: Emerging Technologies}, vol. 117, p. 102673, 2020.
+X.~Chen, J.~Yang, and L.~Sun, ``A nonconvex low-rank tensor completion model for spatiotemporal traffic data imputation,'' \emph{Transportation Research Part C: Emerging Technologies}, vol. 117, p. 102673, 2020.
 
 \bibitem{dae}
-P.~Vincent, H.~Larochelle, I.~Lajoie, Y.~Bengio, P.-A. Manzagol, and L.~Bottou,
-  ``Stacked denoising autoencoders: Learning useful representations in a deep
-  network with a local denoising criterion.'' \emph{Journal of machine learning
-  research}, vol.~11, no.~12, 2010.
+P.~Vincent, H.~Larochelle, I.~Lajoie, Y.~Bengio, P.-A. Manzagol, and L.~Bottou, ``Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion.'' \emph{Journal of machine learning research}, vol.~11, no.~12, 2010.
 
 \bibitem{lstm}
-S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' \emph{Neural
-  computation}, vol.~9, no.~8, pp. 1735--1780, 1997.
+S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' \emph{Neural computation}, vol.~9, no.~8, pp. 1735--1780, 1997.
 
 \end{thebibliography}
