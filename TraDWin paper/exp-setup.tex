@@ -1,4 +1,28 @@
 %!TEX root=./paper.tex
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.5\textwidth]{dataset.png}
+  \caption{Snapshot of sensor locations plotted along with road network from Overpass API}
+  \label{fig:dataset}
+\end{figure}
+\begin{figure*}[]
+  \centering
+  \begin{subfigure}[b]{0.4\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{mape_pred.eps}
+      \caption{MAPE on prediction task for different deltas}
+      \label{fig:mape_pred}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{rmse_pred.eps}
+      \caption{RMSE on prediction task for different deltas}
+      \label{fig:rmse_pred}
+  \end{subfigure}
+  
+  \caption{Performance metrics on prediction task for different deltas (timesteps to predict ahead)}
+  \label{fig:pred_metrics}
+\end{figure*}
 \section{Experiments}\label{sec:experiments}
 In this section, we present the experimental results of our model, detailing the parameters necessary to replicate these outcomes. Additionally, we provide a description of the baseline models used for comparison, along with their respective parameters.
 
@@ -11,14 +35,6 @@ The dataset comprises traffic volumes from 825 sensors located at key intersecti
 Weather data, used in conjunction with the traffic data, is sourced from the official website of Met Éireann, the state meteorological service of Ireland. This data includes hourly information on weather phenomena such as air temperature, relative humidity, visibility, and precipitation amount, collected from three weather stations within the city of Dublin.
 
 We also verify the model for task (iii) using the SUMO~\cite{sumo} TAPASCologne scenario~\cite{tapas}, which simulates the traffic dynamics of Cologne, Germany, over a day. This scenario is publicly available on the official SUMO website and was created using mobility demand data based on citizens' travel habits and information about the local infrastructure. Due to the manual nature of this testing, we conduct a limited number of tests where we alter an edge, process the simulation based on the default minimal travel time routing before and after the change, and observe the deviation between the simulation and our results.
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.5\textwidth]{dataset.png}
-  \caption{Snapshot of sensor locations plotted along with road network from Overpass API}
-  \label{fig:dataset}
-\end{figure}
-
 
 \subsection{Model Parameters}
 

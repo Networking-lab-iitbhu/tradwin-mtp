@@ -1,7 +1,7 @@
 %!TEX root=./paper.tex
-\subsection{\name: Traffic Model}
+\subsection{\textbf{TraDWin: Traffic Model}}
 
-This section outlines the architecture of our \textit{Name} model, drawing inspiration from the Generative Adversarial Imputation Nets (GAIN) \cite{gain} and Wasserstein Generative Adversarial Network (WGAN) \cite{wgan}. GAIN, a novel conditional GAN variant, has demonstrated effectiveness in various tasks involving imputation of missing values across diverse datasets. On the other hand, WGAN represents an advancement over traditional GANs, emphasizing training stability through the use of Wasserstein distance rather than Jensen-Shannon divergence. Architectural enhancements such as gradient clipping and elimination of the sigmoid function contribute to improved convergence and generation of higher-quality samples.
+This section outlines the architecture of our \textit{\name} model, drawing inspiration from the Generative Adversarial Imputation Nets (GAIN) \cite{gain} and Wasserstein Generative Adversarial Network (WGAN) \cite{wgan}. GAIN, a novel conditional GAN variant, has demonstrated effectiveness in various tasks involving imputation of missing values across diverse datasets. On the other hand, WGAN represents an advancement over traditional GANs, emphasizing training stability through the use of Wasserstein distance rather than Jensen-Shannon divergence. Architectural enhancements such as gradient clipping and elimination of the sigmoid function contribute to improved convergence and generation of higher-quality samples. Fig. \ref{fig:architecture} depicts the architecture of \name.
 
 \subsubsection{\textit{Generator:}}
 
@@ -40,9 +40,9 @@ The hint mechanism relies on the binary mask vector \( \mathbf{M} \). For each i
 % The hint mechanism depends on the binary mask vector \( \mathbf{M} \), and for each imputed sample \( (\hat{\mathbf{x}}, \mathbf{m}) \), we draw \( \mathbf{h} \) from the distribution \( \mathbf{H} | \mathbf{M} = \mathbf{m} \). We then add \( \mathbf{h} \) as an extra input to the discriminator, resulting in a function \( D: \mathcal{X} \times \mathcal{H} \rightarrow [0, 1]^d \), where each component of \( D(\hat{\mathbf{x}}, \mathbf{h}) \) represents the probability that the corresponding component of \( \hat{\mathbf{x}} \) was observed given \( \hat{\mathbf{X}} = \hat{\mathbf{x}} \) and \( \mathbf{H} = \mathbf{h} \).
 % By varying how \( \mathbf{H} \) is defined, we control the level of information it provides about \( \mathbf{M} \).
 
-\textcolor{gray!80}{\vrule width 0.95\columnwidth height 0.001pt depth 0pt \relax}
+% \textcolor{gray!80}{\vrule width 0.95\columnwidth height 0.001pt depth 0pt \relax}
 
-\vspace{1ex}
+% \vspace{1ex}
 
 Traditional GANs encounter challenges such as training instability and the generation of repetitive outputs. WGAN mitigates these issues by employing the Wasserstein distance metric in place of the Jensen-Shannon divergence. This approach also incorporates architectural improvements such as gradient clipping and the elimination of the sigmoid function. Now, we discuss how these enhancements from WGAN have been integrated into GAIN.
 In traditional GAN, the generator and discriminator are trained using the following loss functions:
