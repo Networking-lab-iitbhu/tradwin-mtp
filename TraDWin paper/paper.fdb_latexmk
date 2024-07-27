@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex paper"] 1722061932 "paper.aux" "paper.bbl" "paper" 1722061933
+["bibtex paper"] 1722094785 "paper.aux" "paper.bbl" "paper" 1722094786
   "/usr/share/texlive/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "paper.aux" 1722061933 7218 a88c777e28220a6af3ac56daa8138674 "pdflatex"
+  "paper.aux" 1722094786 7640 62da3116bd3cf6fe2f45ce481767cba4 "pdflatex"
   "references.bib" 1721127305 15014 7beba2792ac252aff7583a2572c0e193 ""
   (generated)
   "paper.bbl"
   "paper.blg"
-["pdflatex"] 1722061932 "paper.tex" "paper.pdf" "paper" 1722061933
+["pdflatex"] 1722094785 "paper.tex" "paper.pdf" "paper" 1722094786
   "/etc/texmf/web2c/texmf.cnf" 1693896213 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -56,6 +56,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb" 1248133631 36912 b448ef9ad9d7228ec3c6e71005136d55 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
@@ -164,7 +165,7 @@
   "data-streaming.tex" 1722061335 4506 fdb2a4c7ee2ac42428265b38fc38b028 ""
   "dataset.png" 1719641248 235457 6e5700b671068d485ae8640f2ae96fb5 ""
   "deep-learning.tex" 1721144831 4571 4655062cde971115c8170b2b46cf5b04 ""
-  "exp-setup.tex" 1722061931 6739 3d6e2a9b6a9acee74e53d5fd06dfeb91 ""
+  "exp-setup.tex" 1722062873 6739 3d6e2a9b6a9acee74e53d5fd06dfeb91 ""
   "framework.pdf" 1719641248 371792 1a89a77068035a3aedf0beadbe810070 ""
   "introduction.tex" 1722060173 7261 fd83cd70caf924926477e78fd4619d3d ""
   "mape_imput.eps" 1719641248 37476 ca69fdd5bac2bafe9abda73d98963cb8 ""
@@ -172,12 +173,12 @@
   "model-input.tex" 1722061649 7296 eec227ab92deeaf39c17538c7334f7a6 ""
   "model.pdf" 1721127305 87680 f47b82bf612cfd09378692f3f6bbac96 ""
   "modif.eps" 1719641248 31475 b8032ce370e6ae28bebf5fcb4b6ac77b ""
-  "paper.aux" 1722061933 7218 a88c777e28220a6af3ac56daa8138674 "pdflatex"
-  "paper.bbl" 1722061932 9800 d0fac3e8dfa246cb7e90033d7ceca586 "bibtex paper"
-  "paper.tex" 1722060480 2307 804abee87066c44409cba6e0dde8c3e6 ""
+  "paper.aux" 1722094786 7640 62da3116bd3cf6fe2f45ce481767cba4 "pdflatex"
+  "paper.bbl" 1722094785 9800 d0fac3e8dfa246cb7e90033d7ceca586 "bibtex paper"
+  "paper.tex" 1722094470 2838 e18ff38b81397b84ba296f1fd8355b48 ""
   "problem-formulation.tex" 1722061335 3735 6576ba6b814195cf9710199569cfd5c5 ""
   "related-work.tex" 1721127305 7049 f581379b48a514440740cb3281435088 ""
-  "results.tex" 1722061812 8121 b0bf9c229c0715f25356739b923c9f01 ""
+  "results.tex" 1722094784 8169 4712e8fdb1f2c9ea9c2b4c1ac113acec ""
   "rmse_imput.eps" 1719641248 38476 b0110aa0a71cbf3c553ae5e385dfc840 ""
   "rmse_pred.eps" 1719641248 42050 c3f2b6a11e0fb817fd0c64462d4d8967 ""
   "traffic-model.tex" 1722061595 7352 bb6c56ec40e55df8f4c871c01be3618d ""
